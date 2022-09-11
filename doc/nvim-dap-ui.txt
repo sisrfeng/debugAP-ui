@@ -1,5 +1,4 @@
-================================================================================
-                                                                   *nvim-dap-ui*
+*nvim-dap-ui*
 
 dapui.float_element({elem_name}, {settings})           *dapui.float_element()*
     Open a floating window containing the desired element.
@@ -8,11 +7,11 @@ dapui.float_element({elem_name}, {settings})           *dapui.float_element()*
     contents of the buffer.
 
 
-    Parameters: ~
+    Parameters:
         {elem_name} (string)
         {settings}  (table)
 
-    Fields: ~
+    Fields:
         {width}  (integer)  Fixed width of window
         {height} (integer)  Fixed height of window
         {enter}  (boolean)  Whether or not to enter the window after opening
@@ -25,13 +24,13 @@ dapui.eval({expr}, {settings})                                  *dapui.eval()*
     contents of the buffer.
 
 
-    Parameters: ~
+    Parameters:
         {expr}     (string)  Expression to evaluate. If nil, then in normal
                              more the current word is used, and in visual mode
                              the currently highlighted text.
         {settings} (table)
 
-    Fields: ~
+    Fields:
         {context} (string)   Context to use for evalutate request, defaults to
                              "hover". Hover requests should have no side
                              effects, if you have errors with evaluation, try
@@ -46,10 +45,10 @@ dapui.close({opts})                                            *dapui.close()*
     Close one or all of the window layouts
 
 
-    Parameters: ~
+    Parameters:
         {opts} (table)
 
-    Fields: ~
+    Fields:
         {layout} (number|nil)  Index of layout in config
 
 
@@ -57,10 +56,10 @@ dapui.open({opts})                                              *dapui.open()*
     Open one or all of the window layouts
 
 
-    Parameters: ~
+    Parameters:
         {opts} (table)
 
-    Fields: ~
+    Fields:
         {layout} (number|nil)  Index of layout in config
         {reset}  (boolean)     Reset windows to original size
 
@@ -69,13 +68,14 @@ dapui.toggle({opts})                                          *dapui.toggle()*
     Toggle one or all of the window layouts.
 
 
-    Parameters: ~
+    Parameters:
         {opts} (table)
 
-    Fields: ~
+    Fields:
         {layout} (number|nil)  Index of layout in config
         {reset}  (boolean)     Reset windows to original size
 
 
 
- vim:tw=78:ts=8:ft=help:norl:
+DIY_again
+DIY_2  vim:filetype=help:syntax=help:

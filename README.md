@@ -183,12 +183,13 @@ The REPL provided by nvim-dap.
 
 Element ID: `console`
 
-The console window used by nvim-dap for the integrated terminal.
+The console window
+used by nvim-dap for the integrated terminal.
 
 ## Usage
 
-To get started simply call the setup method on startup,
-optionally providing  custom settings.
+simply call the setup method on ¿startup¿,
+(放进配置文件)
 
 ```lua
     lua require("dapui").setup()
@@ -198,9 +199,10 @@ optionally providing  custom settings.
 You can open, close and toggle the windows with corresponding functions:
 
 ```lua
+    lua require("dapui").toggle()
+
     lua require("dapui").open()
     lua require("dapui").close()
-    lua require("dapui").toggle()
 ```
 
 Each of the functions optionally takes either `"sidebar"` or `"tray"` as an
@@ -209,16 +211,16 @@ argument to only change the specified component.
 You can use nvim-dap events to open and close the windows automatically (`:help dap-extensions`)
 
 ```lua
-local dap, dapui = require("dap"), require("dapui")
-dap.listeners.after.event_initialized["dapui_config"] = function()
-  dapui.open()
-end
-dap.listeners.before.event_terminated["dapui_config"] = function()
-  dapui.close()
-end
-dap.listeners.before.event_exited["dapui_config"] = function()
-  dapui.close()
-end
+    local dap, dapui = require("dap"), require("dapui")
+    dap.listeners.after.event_initialized["dapui_config"] = function()
+      dapui.open()
+    end
+    dap.listeners.before.event_terminated["dapui_config"] = function()
+      dapui.close()
+    end
+    dap.listeners.before.event_exited["dapui_config"] = function()
+      dapui.close()
+    end
 ```
 
 ### Floating Elements
