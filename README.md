@@ -189,14 +189,14 @@ used by nvim-dap for the integrated terminal.
 ## Usage
 
 simply call the setup method on ¿startup¿,
-(放进配置文件)
-
+(放进配置文件) 
 ```lua
-    lua require("dapui").setup()
+        lua require("dapui").setup()
 ```
 
 
-You can open, close and toggle the windows with corresponding functions:
+You can open, close and toggle the windows
+with corresponding functions:
 
 ```lua
     lua require("dapui").toggle()
